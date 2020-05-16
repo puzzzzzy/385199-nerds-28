@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Бобёр](https://up.htmlacademy.ru/htmlcss/28/user/385199).
-* Наставник: `Неизвестно`.
+* Наставник: [Анатолий Пазюк] (https://up.htmlacademy.ru/htmlcss/28/user/380487)
 
 ---
 
