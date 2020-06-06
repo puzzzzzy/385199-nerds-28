@@ -26,13 +26,13 @@
         <div class="slider">
     	      <div class="slider-image">
             		<figure>
-            			  <img src="img/slide1.png" width="760" height="431" alt="Слайд-1">
+            			  <img src="img/slide1.png" width="760" height="431" alt="Три мобильных телефона">
             		</figure>
             		<figure>
-            			  <img src="img/slide-2.png" width="760" height="431" alt="Слайд-2">
+            			  <img src="img/slide-2.png" width="760" height="431" alt="Два монитора">
             		</figure>
             		<figure>
-            			  <img src="img/slide-3.png" width="760" height="431" alt="Слайд-3">
+            			  <img src="img/slide-3.png" width="760" height="431" alt="Телефон и планшет">
             		</figure>
     	      </div>
     	      <div class="slider-switch">
@@ -43,12 +43,12 @@
     	  </div>
     </header>
     <main>
-        <h1>Нёрдс - дизайн-студия из Краснодара</h1>
+        <h1 class="visually-hidden">Нёрдс - дизайн-студия из Краснодара</h1>
         <section>
-    	      <h2>Наши услуги</h2>
+    	      <h2 class="visually-hidden">Наши услуги</h2>
     	      <ul>
     	          <li>
-                    <img src="img/icon-web.png" width="300" height="146" alt="Иконка с изображением ноутбука">
+                    <img src="img/icon-web.png" width="300" height="146" alt="Ноутбук">
     		            <h3>Веб-сайты</h3>
             		    <p>Мир никогда не будет прежним<br>
             		    после того как мир увидит ваш сайт!
@@ -56,7 +56,7 @@
             		    <a href="#">Заказать</a>
     		        </li>
     		        <li>
-                    <img src="img/icon-apps.png" width="300" height="146" alt="Иконка с изображением двух мобильных телефона">
+                    <img src="img/icon-apps.png" width="300" height="146" alt="Два мобильных телефона">
               		  <h3>Приложения</h3>
               		  <p>Покорите топ-10 приложений в<br>
               		  AppStore и Google Play
@@ -64,7 +64,7 @@
               		  <a href="#">Заказать</a>
               	</li>
               	<li>
-                    <img src="img/icon-presentation.png" width="300" height="146" alt="Иконка с изображением доски флипчарта">
+                    <img src="img/icon-presentation.png" width="300" height="146" alt="Флипчарт">
               		  <h3>Презентации</h3>
               		  <p>Вы даже не подозреваете,<br>
               		  насколько вы изумительны!
@@ -86,7 +86,7 @@
           	</ul>
         </article>
         <section>
-        	  <img src="img/nerds-logo-color.jpg" width="360" height="208" alt="Logotip-color">
+        	  <img src="img/nerds-logo-color.jpg" width="360" height="208" alt="Логотип в цвете">
         	  <p>C 2004 года Любим точность во всем:</p>
         	  <table>
         		    <tr>
@@ -120,7 +120,7 @@
     </main>
     <footer>
       	<section>
-      		  <a href="#"><img src="img/map.png" width="1440" height="416" alt="Maps"></a>
+      		  <a href="#"><img src="img/map.png" width="1440" height="416" alt="Map"></a>
       	</section>
       	<section>
       	    <h2>Nёrds design studio</h2>
@@ -129,11 +129,30 @@
           	</p>
           	<a href="#">Напишите нам</a>
       	</section>
+        <div class="popap-feedback">
+            <form action="https://echo.htmlacademy.ru" method="post">
+                <h2>Напишите нам</h2>
+                <label>
+                    <p>Ваше имя:</p>
+                    <input type="text" name="name" placeholder="Имя Фамилия" required>
+                </label>
+                <label>
+                    <p>Ваш email:</p>
+                    <input type="email" name="email" placeholder="email@example.com" required>
+                </label>
+                <label>
+                    <p>Текст письма:</p>
+                    <textarea placeholder="В свобдной форме" required></textarea>
+                </label>
+                <button type="submit">Отправить</button>
+            </form>
+            <button><img src="img/close-cross.svg" alt="Закрыть"></button>
+        </div>
        	<section>
         		<ul>
-            		<li><a href="#"><img src="img/vk-icon.svg" width="81" height="81" alt="Иконка Вконтакте"></a></li>
-            		<li><a href="#"><img src="img/fb-icon.svg" width="81" height="81" alt="Иконка Фейсбук"></a></li>
-            		<li><a href="#"><img src="img/insta-icon.svg" width="81" height="81" alt="Иконка Инстаграм"></a></li>
+            		<li><a href="#"><img src="img/vk-icon.svg" width="81" height="81" alt="Вконтакте"></a></li>
+            		<li><a href="#"><img src="img/fb-icon.svg" width="81" height="81" alt="Фейсбук"></a></li>
+            		<li><a href="#"><img src="img/insta-icon.svg" width="81" height="81" alt="Инстаграм"></a></li>
         	  </ul>
         </section>
         <section>

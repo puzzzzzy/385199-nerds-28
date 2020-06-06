@@ -6,7 +6,7 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="img/nerds-logo.svg" width="160" height="66" alt="Logotip"></a>
+        <a href="index.html"><img src="img/nerds-logo.svg" width="160" height="66" alt="Nerds-логотоп компании"></a>
     		<nav>
     			  <ul>
               	<li><a href="#">Студия</a></li>
@@ -20,8 +20,8 @@
     <main>
         <h1>Магазин готовых шаблонов</h1>
         <section class="parameters">
-            <h2>Выбор параметров</h2>
-            <form>
+            <h2 class="visualy-hidden">Выбор параметров</h2>
+            <form action="https://echo.htmlacademy.ru" method="get">
                 <h3>Стоимость:</h3>
                 <div class="price-bar">
                 Здесь будет крутилка для цены
@@ -30,17 +30,41 @@
                     От<input type="text" name="price1" value="0">
                     До<input type="text" name="price2" value="15000">
                 </p>
-                <h3>Сетка:</h3>
-                    <input type="radio" name="grid" value="adaptive" checked>Адаптивная
-                    <input type="radio" name="grid" value="fixed">Фиксированная
-                    <input type="radio" name="grid" value="rubber">Резиновая
-                <h3>Особенности</h3>
-                    <input type="checkbox" name="slider" value="slider" checked>Слайдер
-                    <input type="checkbox" name="advantage" value="advantage">Блок преимуществ
-                    <input type="checkbox" name="news" value="news" checked>Новости
-                    <input type="checkbox" name="galery" value="galery">Галерея
-                    <input type="checkbox" name="basket" value="basket">Корзина
-                    <input type="submit" name="enter" value="Показать">
+                <fieldset>
+                    <legend>Сетка:</legend>
+                    <ul>
+                        <li>
+                            <label><input type="radio" name="grid" value="adaptive" checked>Адаптивная</label>
+                        </li>
+                        <li>
+                            <label><input type="radio" name="grid" value="fixed">Фиксированная</label>
+                        </li>
+                        <li>
+                            <label><input type="radio" name="grid" value="rubber">Резиновая</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Особенности</legend>
+                        <ul>
+                            <li>
+                                <label><input type="checkbox" name="slider" checked>Слайдер</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" name="advantage">Блок преимуществ</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" name="news" checked>Новости</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" name="galery">Галерея</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" name="basket">Корзина</label>
+                            </li>
+                        </ul>           
+                </fieldset>
+                <button type="submit">Показать</button>
             </form>
         </section>
         <section class="sort">
@@ -48,6 +72,8 @@
                 <a href="#">По цене</a>
                 <a href="#">По типу</a>
                 <a href="#">По названию</a>
+                <a href="#"><img src="img/icon-down-dir.svg" alt="Стрелка вниз"></a>
+                <a href="#"><img src="img/icon-up-dir.svg" alt="Стрелка вверх"></a>
         </section>
         <section>
             <h2>Каталог</h2>
@@ -88,7 +114,7 @@
                 <li>
                     <article>
                         <img src="img/browser.svg" width="360" height="40" alt="up-bar">
-                        <img src="img/mishki.jpg" width="360" height="580" alt="Макет сайта mishki">
+                        <img src="img/mishka.jpg" width="360" height="580" alt="Макет сайта mishki">
                         <div>
                             <h3>Mishki</h3>
                             <p>Сайт милых штуки ручной работы для дома</p>
@@ -128,27 +154,46 @@
         </div>
     </main>
     <footer>
-    	  <section>
-    		    <a href="#"><img src="img/map.png" width="1440" height="416" alt="Maps"></a>
-    	  </section>
-    	  <section>
-    	      <h2>Nёrds design studio</h2>
-    	      <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел.<br>
-    	      +7 (812) 275-75-75
-    	      </p>
-    	      <a href="#">Напишите нам</a>
-    	  </section>
-    	  <section>
-    		    <ul>
-    		        <li><a href="#"><img src="img/vk-icon.svg" width="81" height="81" alt="Иконка Вконтакте"></a></li>
-                <li><a href="#"><img src="img/fb-icon.svg" width="81" height="81" alt="Иконка Фейсбук"></a></li>
-                <li><a href="#"><img src="img/insta-icon.svg" width="81" height="81" alt="Иконка Инстаграм"></a></li>
-    	     </ul>
+        <section>
+            <a href="#"><img src="img/map.png" width="1440" height="416" alt="Map"></a>
         </section>
         <section>
-    	     <h2>Давайте дружить, это выгодно!</h2>
-    	     <p>Скидка 10% для друзей из социальных сетей.</p>
-    	  </section>
+            <h2>Nёrds design studio</h2>
+            <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел.<br>
+            +7 (812) 275-75-75
+            </p>
+            <a href="#">Напишите нам</a>
+        </section>
+        <div class="popap-feedback">
+            <form action="https://echo.htmlacademy.ru" method="post">
+                <h2>Напишите нам</h2>
+                <label>
+                    <p>Ваше имя:</p>
+                    <input type="text" name="name" placeholder="Имя Фамилия" required>
+                </label>
+                <label>
+                    <p>Ваш email:</p>
+                    <input type="email" name="email" placeholder="email@example.com" required>
+                </label>
+                <label>
+                    <p>Текст письма:</p>
+                    <textarea placeholder="В свобдной форме" required></textarea>
+                </label>
+                <button type="submit">Отправить</button>
+            </form>
+            <button><img src="img/close-cross.svg" alt="Закрыть"></button>
+        </div>
+        <section>
+            <ul>
+                <li><a href="#"><img src="img/vk-icon.svg" width="81" height="81" alt="Вконтакте"></a></li>
+                <li><a href="#"><img src="img/fb-icon.svg" width="81" height="81" alt="Фейсбук"></a></li>
+                <li><a href="#"><img src="img/insta-icon.svg" width="81" height="81" alt="Инстаграм"></a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Давайте дружить, это выгодно!</h2>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
+        </section>
     </footer>
 </body>
 </html>
