@@ -1,0 +1,531 @@
+/*GLOBAL*/
+:root {
+	--white: #FFFFFF;
+	--grey-extra-light: #D7DCDE;
+	--grey-light: #B4B9BB;
+    --grey: #EEEEEE;
+	--grey-dark: #DFDFDF;
+	--grey-extra-dark: #D5D5D5;
+	--grey-special: #666666;
+	--grey-for-social: #E1E1E1;
+	--grey-page-button: #DBDBDB;
+
+	--black: #000000;
+	--black-light: #283136;
+	--black-extra-light: #444444;
+	
+	--red: #FB565A;
+	--red-dark: #E74246;
+	--red-extra-dark: #D7373B;
+
+	--green: #00CA74;
+	--green-dark: #00BC6C;
+	--green-extra-dark: #00AA62;
+
+	--yellow: #EFC84A;
+	--yellow-dark: #EAB534;
+	--yellow-extra-dark: #E5A722;
+}
+
+body {
+	min-width: 1460px;
+	margin: 0;
+	padding: 0;
+	padding-left: 30px; /*ВРЕМЕННО*/
+	font-family: "Roboto", "Arial", sans-serif;
+	font-size: 16px
+	line-height: 24px;
+	font-weight: 400;
+	color: var(--black);
+	background-color: var(--white);
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1 {
+	font-weight: 500;
+	font-size: 55px;
+	line-height: 55px;
+}
+
+.visually-hidden {
+	display: none;
+}
+
+
+/*INDEX.HTML*/
+.main-header {
+	background-color: var(--grey);
+}
+
+a.logo:focus {
+	opacity: 0.3;
+}
+
+.main-navigation, .cart {
+	line-height: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.site-navigation {
+	list-style: none;
+}
+
+.cart {
+	background-image: url('../img/cart-icon.svg');
+	background-repeat: no-repeat;
+}
+.cart a {
+	padding: 0;
+	padding-left: 40px;
+}
+
+.site-navigation a, .cart a {
+	color: var(--black);
+}
+
+.site-navigation a:hover, .cart a:hover {
+	color: #FB565A;
+}
+
+.site-navigation a:focus, .cart a:focus {
+	color: var(--black);
+	/*opacity: 0.3;*/
+}
+.slide-item h2 {
+	font-weight: 500;
+	font-size: 55px;
+	line-height: 55px;
+
+}
+.slide-item p {
+	color: var(--black-light);
+}
+
+.slide-item a {
+	font-weight: 500;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: var(--white);
+	background-color: var(--red);
+	border-radius: 3px;
+}
+
+.slide-item a:hover {
+	background-color: var(--red-dark);
+}
+
+.slide-item a:focus {
+	background-color: var(--red-extra-dark);
+	color: rgba(255, 255, 255, 0.3);
+}
+.slider-switch fieldset {
+	border: none;
+}
+
+.services {
+	list-style: none;
+	color: var(--black-light);
+}
+
+.services h3 {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.services-website a {
+	font-weight: 500;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: var(--white);
+	background-color: var(--red);
+	border-radius: 3px;
+}
+
+.services-website a:hover {
+	background-color: var(--red-dark);
+}	
+
+.services-website a:focus {
+	background-color: var(--red-extra-dark);
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.services-apps a {
+	font-weight: 500;
+	line-height: 18px;
+	text-transform: uppercase;
+	background-color: var(--green);
+	color: var(--white);
+	border-radius: 3px;
+}
+
+.services-apps a:hover {
+	background-color: var(--green-dark);
+}	
+
+.services-apps a:focus {
+	background-color: var(--green-extra-dark);
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.services-presentation a {
+	font-weight: 500;
+	line-height: 18px;
+	text-transform: uppercase;
+	background-color: var(--yellow);
+	color: var(--white);
+	border-radius: 3px;
+}
+
+.services-presentation a:hover {
+	background-color: var(--yellow-dark);
+}	
+
+.services-presentation a:focus {
+	background-color: var(--yellow-extra-dark);
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.main-article p, .list-jobs {
+	color: var(--black-light);
+}
+
+p.main-article-header {
+	font-weight: 500;
+	font-size: 45px;
+	line-height: 45px;
+	color: var(--black);
+}
+
+.main-article h4 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.advantage {
+	width: 374px;
+	line-height: 18px;
+	color: var(--black-light);
+}
+
+.advantage caption {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--black);
+	
+}
+
+.big-text {
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 64px;
+	height: 64px;
+	color: var(--black);
+}
+
+.big-text span{
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 40px;
+	vertical-align: top;
+}
+
+.partners {
+	list-style: none;
+}
+
+.adress {
+	line-height: 18px;
+	color: var(--grey-special);
+}
+
+.adress h2 {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--black);
+}
+
+.adress a {
+	font-weight: 500;
+	line-height: 18px;
+	text-transform: uppercase;
+	background-color: var(--red);
+	color: var(--white);
+	border-radius: 3px;
+} 
+
+.adress a:hover {
+	background-color: var(--red-dark);
+}	
+
+.adress a:focus {
+	background-color: var(--red-extra-dark);
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.popup-feedback{
+	display: none;
+}
+
+.popup-feedback h2 {
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 53px;
+}
+.popup-feedback p {
+	font-weight: 700;
+	line-height: 18px;
+}
+
+.popup-feedback input, .popup-textarea {
+	font: inherit;
+	line-height: 18px;
+	color: var(--black);
+	border: 2px solid var(--grey-extra-light);
+	box-sizing: border-box;
+	border-radius: 3px;
+}
+
+.popup-feedback input:hover {
+	border-color: var(--grey-light);
+}
+
+.popup-feedback input:focus {
+	border-color: var(--black);
+}
+
+.popup-feedback input:invalid {
+	border-color: var(--red-dark);
+	color: var(--red-dark);
+}
+
+.popup-feedback textarea:hover {
+	border-color: var(--grey-light);
+}
+
+.popup-feedback textarea:focus {
+	border-color: var(--black);
+}
+
+
+.button-submit {
+	font: inherit;
+	border: none;
+	font-weight: 500;
+	line-height: 18px;
+	text-transform: uppercase;
+	background-color: var(--red);
+	color: var(--white);
+	border-radius: 3px;
+}
+
+.button-submit:hover {
+	background-color: var(--red-dark);
+}
+
+.button-submit:focus {
+	background-color: var(--red-extra-dark);
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.button-close {
+	border: none;
+	background-color: inherit;
+	opacity: 0.3;
+}
+
+.button-close:hover {
+	opacity: 1;
+}
+
+.button-close:focus {
+	opacity: 0.1;
+}
+
+.social-button {
+	list-style: none;
+}
+
+.social-button a {
+	display: block;
+	height: 81px;
+	width: 81px;
+	background: var(--grey-for-social);
+	border-radius: 50%;
+	text-align: center;
+}
+
+.social-button a:hover {
+	background-color: var(--red-dark);
+}
+
+.social-button a:focus {
+	background-color: var(--red-extra-dark);
+}
+
+.social-text h2 {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 36px;
+}
+.social-text p {
+	line-height: 22px;
+	color: var(--black-extra-light);
+}
+
+
+
+/*CATALOG.HTML*/
+
+.parameters h3, .parameters legend, .sort h3 {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.price-diapason {
+	line-height: 22px;
+	color: var(--black-light);
+	text-transform: uppercase;
+}
+.price-diapason input {
+	font: inherit;
+	border: 0px;
+	background-color: var(--grey);
+	border-radius: 3px;
+}
+
+.parameters fieldset {
+	border: none;
+}
+
+.parameters ul {
+	list-style: none;
+}
+
+.parameters li {
+	line-height: 19px;
+	color: var(--black-light);
+}
+
+/*НЕ СОВСЕМ ПОКА ПОНИМАЮ КАК РАДИО И ЧЕКБОКС СТИЛИЗОВАТЬ КАРТИНКАМИ*/
+
+.button-submit-form {
+	font: inherit;
+	font-weight: 500;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: var(--black);
+	border-radius: 3px;
+	border: 0;
+	background-color: var(--grey);
+}
+
+.button-submit-form:hover {
+	background-color: var(--grey-dark);
+}
+
+.button-submit-form:focus {
+	background-color: var(--grey-extra-dark);
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.sort a {
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: var(--black);
+	opacity: 0.3;
+}
+
+.sort a:hover {
+	opacity: 0.6;
+}
+
+.sort a:active, .sort a:focus {
+	opacity: 1;
+}
+/*НЕ ПОНЯТНО КАК СДЕЛАТЬ 2 ССЫЛКИ АКТИВНЫМИ*/
+
+.catalog {
+	list-style: none;
+}
+
+.catalog div {
+	background-color: var(--grey);
+	line-height: 18px;
+	color: var(--grey-special);
+}
+
+a.caption-header {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--black);
+}
+
+a.caption-header:hover {
+	color: var(--red);
+}
+
+a.caption-header:focus {
+	color: var(--black);
+	color: rgba(0, 0, 0, 0.3);
+}
+
+a.buy {
+	font-weight: 500;
+	line-height: 18px;
+	color: var(--white);
+	background-color: var(--red);
+	border-radius: 3px;
+}
+
+a.buy:hover {
+	background-color: var(--red-dark);
+}
+
+a.buy:focus {
+	background-color: var(--red-extra-dark);
+	color: rgba(255, 255, 255, 0.3); 
+}
+
+.page-button a {
+	font-weight: 500;
+	line-height: 18px;
+	background-color: var(--grey);
+	border-radius: 3px;
+	color: var(--black);
+}
+
+.page-button a:active { /*НЕ ПОНЯТНО КК СДЕЛАТЬ ЧТОБЫ РАБОТАЛО*/
+	box-shadow: none;
+	background-color: rgba(0, 0, 0, 0.0001);
+	border-color: var(--grey-page-button);
+	box-sizing: border-box;
+}
+
+.page-button a:hover {
+	background-color: var(--grey-dark);
+}
+.page-button a:focus {
+	color: rgba(0, 0, 0, 0.3);
+	background-color: var(--grey-extra-dark);
+	
+	
+}
+
