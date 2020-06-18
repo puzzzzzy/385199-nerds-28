@@ -84,6 +84,7 @@ figure {
 	margin-top: 49px;
 	width: 100%;
 	display: flex;
+  	justify-content: flex-start;
   	outline: 5px solid rgba(0, 255, 0, 0.3);
   	outline-offset: -5px;
  }
@@ -137,9 +138,7 @@ a.logo:focus {
 	padding: 0;
 	margin-left: 245px;
 	margin-top: 27px;
-	flex-wrap: wrap;
 	background-image: url('../img/cart-icon.svg');
-	display: inline-block;
 	background-repeat: no-repeat;
 	background-position: left center;
 	outline: 5px solid rgba(255, 0, 0, 0.3);
