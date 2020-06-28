@@ -35,9 +35,9 @@
 		                    </p>
 		                    <a href="#">Узнать больше</a>
 		                </article>
-		        		<img src="img/slide1.png" width="760" height="431" alt="Три мобильных телефона">
+		        		<!-- <img src="img/slide1.png" width="760" height="431" alt="Три мобильных телефона"> -->
 	        		</figure>
-	        		<figure class="slide slide2 visually-hidden">
+	        		<figure class="slide slide2 slide-hidden">
 		                <article class="slide-item">
 		                    <h2>Любим математику<br>как никто другой</h2>
 		                    <p>Ни какого креатива, только математические формулы<br>для расчета идеальных пропорций</p>
@@ -45,7 +45,7 @@
 		                </article>
 		        		<img src="img/slide2.png" width="760" height="431" alt="Два монитора">
 	        		</figure>
-	        		<figure class="slide slide3 visually-hidden">
+	        		<figure class="slide slide3 slide-hidden">
 		                <article class="slide-item">
 		                    <h2>Только ночь,<br>только хардкор</h2>
 		                    <p>Работаем днем, как все? Мы против этого.<br>
@@ -115,7 +115,7 @@
 		          	</ul>
 		        </article>
 		        <section class="aside">
-		        	  	<img src="img/nerds-logo-color.jpg" width="360" height="208" alt="Логотип в цвете">
+		        	  	<img class="img-logo-color" src="img/nerds-logo-color.jpg" width="360" height="208" alt="Логотип в цвете">
 		        	  	<table class="advantage">
 		        	  		<caption>C 2004 года Любим точность во всем:</caption>
 		        		    <tr class="big-text">
@@ -123,74 +123,88 @@
 		            			<td>100<span>%</span></td>
 		            			<td>50<span>%</span></td>
 		        		    </tr>
-		            		<tr>
+		            		<tr class="advantage-tr2">
 		            			<td>Уровень самоотдачи</td>
 		            			<td>Соблюдение сроков</td>
-		            			<td>Мимальная предоплата</td>
+		            			<td>Минимальная предоплата</td>
 		            		</tr>
 		        		</table>
 		        </section>
 	    	</div>
     	</div>
-        <section>
-            <h2 class="visually-hidden">Наши партнеры</h2>
-        	<ul class="partners">
-            	<li>
-        			<a href="#"><img src="img/logo-html-academy.png" width="199" height="68" alt="HTML Academy"></a>
-        		</li>
-        		<li>
-        			<a href="#"><img src="img/logo-borodinski.png" width="209" height="90" alt="Borodinski"></a>
-        		</li>
-        		<li>
-        			<a href="#"><img src="img/logo-pink.png" width="185" height="52" alt="Pink"></a>
-        		</li>
-        		<li>
-        			<a href="#"><img src="img/logo-mishka.png" width="173" height="84" alt="MISHKA"></a>
-        		</li>
-            </ul>
+        <section class="partners">
+        	<div class="container">
+        		<h2 class="visually-hidden">Наши партнеры</h2>
+		        	<ul class="partners-list">
+	            	<li class="partners-item-1">
+	        			<a href="#"><img src="img/logo-html-academy.svg" width="199" height="68" alt="HTML Academy"></a>
+	        		</li>
+	        		<li class="partners-item-2">
+	        			<a href="#"><img src="img/logo-borodinski.svg" width="209" height="90" alt="Borodinski"></a>
+	        		</li>
+	        		<li class="partners-item-3">
+	        			<a href="#"><img src="img/logo-pink.svg" width="185" height="52" alt="Pink"></a>
+	        		</li>
+	        		<li class="partners-item-4">
+	        			<a href="#"><img src="img/logo-mishka.svg" width="173" height="84" alt="MISHKA"></a>
+	        		</li>
+	            </ul>
+		    </div>
         </section>	
     </main>
     <footer>
-      	<section>
-      		<a href="#"><img src="img/map.png" width="1440" height="416" alt="Map"></a>
+      	<section class="map">
+      		<a href="#"><img class="map-img" src="img/map.png" width="1180" height="416" alt="Map"></a>
+      		<div class="container">
+	      		<section class="adress">
+		      	    <h2>Nёrds design studio</h2>
+		          	<p>191186, Санкт-Петербург,<br>
+		          	ул. Б. Конюшенная, д. 19/8<br><br>
+		          	тел. +7 (812) 275-75-75
+		          	</p>
+		          	<a href="#">Напишите нам</a>
+	      		</section>
+	      	</div>
       	</section>
-      	<section class="adress">
-      	    <h2>Nёrds design studio</h2>
-          	<p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел.<br>
-          	+7 (812) 275-75-75
-          	</p>
-          	<a href="#">Напишите нам</a>
-      	</section>
-        <div class="popup-feedback">
-            <form action="https://echo.htmlacademy.ru" method="post">
-                <h2>Напишите нам</h2>
-                <label>
-                    <p>Ваше имя:</p>
-                    <input type="text" name="name" placeholder="Имя Фамилия" required>
-                </label>
-                <label>
-                    <p>Ваш email:</p>
-                    <input type="email" name="email" placeholder="email@example.com" required>
-                </label>
-                <label>
-                    <p>Текст письма:</p>
-                    <textarea class="popup-textarea" name="textarea" placeholder="В свободной форме" required></textarea>
-                </label><br>
-                <button class="button-submit" type="submit">Отправить</button>
-            </form>
-            <button class="button-close"><img src="img/close-cross.svg" alt="Закрыть"></button>
-        </div>
-       	<section>
-        		<ul class="social-button">
-            		<li><a href="#"><span class="visually-hidden">Вконтакте</span><img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте"></a></li>
-            		<li><a href="#"><span class="visually-hidden">Фейсбук</span><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук"></a></li>
-            		<li><a href="#"><span class="visually-hidden">Инстаграм</span><img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм"></a></li>
-        	    </ul>
-        </section>
-        <section class="social-text">
-        	  <h2>Давайте дружить, это выгодно!</h2>
-        	  <p>Скидка 10% для друзей из социальных сетей.</p>
-        </section>
+      	<div class="container">
+        	<div class="social">
+		       	<section class="social-button">
+	        		<ul>
+	            		<li><a href="#"><span class="visually-hidden">Вконтакте</span><img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте"></a></li>
+	            		<li><a href="#"><span class="visually-hidden">Фейсбук</span><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук"></a></li>
+	            		<li><a href="#"><span class="visually-hidden">Инстаграм</span><img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм"></a></li>
+	        	    </ul>
+		        </section>
+		        <section class="social-text">
+		        	<h2>Давайте дружить, это выгодно!</h2>
+		        	<p>Скидка 10% для друзей из социальных сетей.</p>
+		        </section>
+		    </div>
+	    </div>
     </footer>
+    <form class="popup-feedback" action="https://echo.htmlacademy.ru" method="post">
+    	<div class="popup-feedback-container">
+	    	<div class="popup-feedback-header">
+	    		<h2>Напишите нам</h2>
+	        	<button class="button-close"><img src="img/close-cross.svg" alt="Закрыть"></button>
+	        </div>
+	        <div class="popup-feedback-personal">
+		        <label>
+		            <span>Ваше имя:</span>
+		            <input type="text" name="name" placeholder="Имя Фамилия" required>
+		        </label>
+		        <label>
+		            <span>Ваш email:</span>
+		            <input type="email" name="email" placeholder="email@example.com" required>
+		        </label>
+		    </div>
+		    
+		        <label>
+		            <span>Текст письма:</span>
+		            <textarea class="popup-textarea" name="textarea" placeholder="В свободной форме" required></textarea>
+		        </label>
+		    <button class="button-submit" type="submit">Отправить</button>
+	    </div>
+    </form>
 </body>
 </html>
