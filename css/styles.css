@@ -11,12 +11,17 @@
 	--grey-dark: #DFDFDF;
 	--grey-extra-dark: #D5D5D5;
 	--grey-special: #666666;
-	--grey-for-social: #E1E1E1;
 	--grey-page-button: #DBDBDB;
+	--grey-for-social: #E1E1E1;
+	--grey-for-toggle: #ABABAB;
+	--grey-for-shadow-toggle: #CFCFCF;
+	--grey-for-slider-button: #C1C1C1;
+	
 
 	--black: #000000;
 	--black-light: #283136;
 	--black-extra-light: #444444;
+	--black-for-filter: #4D4d4D;
 	
 	--red: #FB565A;
 	--red-dark: #E74246;
@@ -79,7 +84,7 @@ figure {
 
 
 
-/*---------------INDEX.HTML---------------*/
+/*------------------------------INDEX.HTML---------------*/
 .main-header {
 	background-color: var(--grey);	
 }
@@ -153,9 +158,17 @@ a.logo:focus {
 	padding-left: 40px;
 }
 
+.slider {
+	position: relative;
+}
+
 .slide {
-	display: flex;
+	display: none;
 	justify-content: space-between;
+}
+
+.slide-current {
+	display: flex;
 }
 
 .slide-item {
@@ -205,7 +218,7 @@ a.logo:focus {
 .slide1 {
 	background: url('../img/slide1.png') no-repeat;
 	background-position-x: 397px;
-	background-position-y: -7px;
+	background-position-y: -8px;
 }
 
 .slide2 {
@@ -218,19 +231,34 @@ a.logo:focus {
 	background-position: right top;
 }
 
-.slide-hidden {
-	display: none;
-}
-
 .slider-switch {
 	position: absolute;
-	left: 300px;
-	bottom: 300px;
-}
-.slider-switch fieldset {
-	border: none;
+	width: 88px;
+	display: flex;
+	justify-content: space-between;
+	left: 536px;
+	bottom: 96px;
 }
 
+.slider-switch button {
+	padding: 0;
+	margin: 0;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	border: none;
+	background-color: var(--white);
+	cursor: pointer;
+}
+.current::after {
+	content: "";
+	position: absolute;
+	bottom: 3px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	border: 2px solid var(--black);
+}
 .services {
 	list-style: none;
 	color: var(--black-light);
@@ -601,7 +629,23 @@ p.main-article-header {
 }
 
 
-/*----------------CATALOG.HTML---------------*/
+/*------------------------------CATALOG.HTML---------------*/
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .catalog-header {
 	padding-top: 55px;
 	padding-bottom: 108px;
@@ -660,7 +704,9 @@ p.main-article-header {
 .parameters-header-sort a:active, .parameters-header-sort a:focus {
 	opacity: 1;
 }
-/*НЕ ПОНЯТНО КАК СДЕЛАТЬ 2 ССЫЛКИ АКТИВНЫМИ*/
+
+/*------------------------------FILTER---------------*/
+
 .filter-wrapper {
 	display: flex;
 	margin-top: 30px;
@@ -671,28 +717,71 @@ p.main-article-header {
 	margin-right: 140px;
 }
 
-.price-bar {
+.filter fieldset {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.range-filter {
+  width: 260px;
+  /*margin-top: 49px;*/
+}
+.range-controls {
+	position: relative;
 	margin-bottom: 13px;
-	width: 260px;
-	height: 80px;
-	left: 140px;
-	top: 488px;
+	height: 41px;
+	padding-top: 39px;
+  	padding-right: 20px;
+  	padding-left: 20px;
 	background: var(--grey);
 	border-radius: 3px;
 }
 
+.range-controls .scale {
+  height: 2px;
+  background: var(--grey-extra-light);
+}
 
-.price-diapason {
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: var(--green);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--white);
+  background-color: var(--grey-for-toggle);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--grey-for-shadow-toggle);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
 	line-height: 22px;
 	color: var(--black-light);
 	text-transform: uppercase;
 	margin-bottom: 54px;
 }
 
-.price-diapason-start {
+.min-price {
 	margin-right: 30px;
 }
-.price-diapason input {
+.price-controls input {
 	box-sizing: border-box;
 	margin-left: 9px;
 	font: inherit;
@@ -704,20 +793,14 @@ p.main-article-header {
 	border-radius: 3px;
 }
 
-.filter fieldset {
-	padding: 0;
-	margin: 0;
-	border: none;
-}
-
 .filter ul {
 	padding: 0;
 	list-style: none;
 }
 
 .filter li {
-	padding-left: 15px;
-	padding-bottom: 20px;
+	padding-left: 37px;
+	padding-bottom: 22px;
 	line-height: 19px;
 	color: var(--black-light);
 }
@@ -726,7 +809,68 @@ p.main-article-header {
 	padding-bottom: 0;
 }
 
-/*НЕ СОВСЕМ ПОКА ПОНИМАЮ КАК РАДИО И ЧЕКБОКС СТИЛИЗОВАТЬ КАРТИНКАМИ*/
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: -2px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 4px solid var(--black-for-filter);
+  opacity: 0.4;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -28px;
+  width: 7px;
+  height: 7px;
+  background-color: var(--black-for-filter);
+  opacity: 0.4;
+  border-radius: 50%;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: -2px;
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(--black-for-filter);
+  border-radius: 5px;
+  opacity: 0.4;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -30px;
+  width: 22px;
+  height: 17px;
+  border: none;
+  background-image: url("../img/checkbox-onn.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.4;
+}
+
+
+
+
+
+
 
 .net-choise {
 	margin-bottom: 45px;
@@ -762,7 +906,6 @@ p.main-article-header {
 	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-
 .catalog {
 	margin: 0;
 	padding: 0;
@@ -784,7 +927,6 @@ p.main-article-header {
 	box-sizing: border-box;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 0 0 5px 5px;
-
 }
 
 .catalog-item {
@@ -812,8 +954,13 @@ p.main-article-header {
 .catalog-item:hover .catalog-item-caption {
 	display: flex;
 }
+
 .catalog-item:hover .catalog-item-img-header{
 	opacity: 1;
+}
+
+.catalog-item:hover {
+box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
 }
 
 .catalog-item-caption h3 {
@@ -823,6 +970,7 @@ p.main-article-header {
 .catalog-item-caption p {
 	margin-bottom: 32px;
 }
+
 a.caption-header {
 	font-weight: 700;
 	font-size: 18px;
@@ -839,7 +987,6 @@ a.caption-header:focus {
 	color: var(--black);
 	color: rgba(0, 0, 0, 0.3);
 }
-
 
 a.buy {
 	margin-bottom: 44px;
@@ -907,7 +1054,7 @@ a.buy:focus {
 	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-/*---------------POPUP---------------*/
+/*------------------------------POPUP---------------*/
 
 .popup-feedback {
 	width: 960px;

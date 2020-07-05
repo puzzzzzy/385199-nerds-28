@@ -16,7 +16,7 @@
 		    		    <li><a href="#">Студия</a></li>
 		    		    <li><a href="#">Клиенты</a></li>
 		    		    <li><a href="catalog.html">Магазин</a></li>
-		    		    <li><a href="#">Контакты</a></li>
+		    		    <li><a href="#">Контакты</a></li>		    		  
 		    	    </ul>
 		        </nav>
 		        <div class="cart">
@@ -24,10 +24,10 @@
 		        </div>
 	    	</div>
     	</div>
-        <div class="slider">
-        	<div class="container">
+    	<div class="container">
+        	<div class="slider">
 	    	    <div class="slider-images">
-	        		<figure class="slide slide1">
+	        		<figure class="slide slide1 slide-current">
 		                <article class="slide-item">
 		                    <h2>Долго, дорого,<br>скрупулезно.</h2>
 		                    <p>Математически выверенный дизайн<br>
@@ -35,17 +35,15 @@
 		                    </p>
 		                    <a href="#">Узнать больше</a>
 		                </article>
-		        		<!-- <img src="img/slide1.png" width="760" height="431" alt="Три мобильных телефона"> -->
 	        		</figure>
-	        		<figure class="slide slide2 slide-hidden">
+	        		<figure class="slide slide2">
 		                <article class="slide-item">
 		                    <h2>Любим математику<br>как никто другой</h2>
 		                    <p>Ни какого креатива, только математические формулы<br>для расчета идеальных пропорций</p>
 		                    <a href="#">Узнать больше</a>
 		                </article>
-		        		<img src="img/slide2.png" width="760" height="431" alt="Два монитора">
-	        		</figure>
-	        		<figure class="slide slide3 slide-hidden">
+		        	</figure>
+	        		<figure class="slide slide3">
 		                <article class="slide-item">
 		                    <h2>Только ночь,<br>только хардкор</h2>
 		                    <p>Работаем днем, как все? Мы против этого.<br>
@@ -53,17 +51,13 @@
 		                    </p>
 		                    <a href="#">Узнать больше</a>
 		                </article>
-		        		<img src="img/slide3.png" width="760" height="431" alt="Телефон и планшет">
-	        		</figure>
+		        	</figure>
 	    	    </div>
-	    	    <div class="slider-switch visually-hidden">
-	                <fieldset>
-	                    <legend class="visually-hidden">Выбор слайда</legend>
-	        		        <input type="radio" name="slide" value="1" checked aria-label="Перейти к первому слайду">
-	        		        <input type="radio" name="slide" value="2" aria-label="Перейти к вторму слайду">
-	        		        <input type="radio" name="slide" value="3" aria-label="Перейти к третьему слайду">
-	                </fieldset>
-	            </div>
+	    	    <div class="slider-switch">
+	    	    	<button class="current" type="button" aria-label="Первый слайд"></button>
+		            <button class="current" type="button" aria-label="Второй слайд"></button>
+		            <button class="current" type="button" aria-label="Третий слайд"></button>		        	
+		        </div>
     	    </div>
     	</div>
     </header>
@@ -198,7 +192,6 @@
 		            <input type="email" name="email" placeholder="email@example.com" required>
 		        </label>
 		    </div>
-		    
 		        <label>
 		            <span>Текст письма:</span>
 		            <textarea class="popup-textarea" name="textarea" placeholder="В свободной форме" required></textarea>
