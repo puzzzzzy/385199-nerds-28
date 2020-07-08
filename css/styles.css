@@ -545,7 +545,11 @@ p.main-article-header {
 	padding-top: 22px;
 }
 
-.adress a {
+.tel{
+	color: var(--grey-special);
+}
+
+.write-to-us {
 	width: 219px;
 	height: 50px;
 	display: flex;
@@ -561,11 +565,11 @@ p.main-article-header {
 	margin-bottom: 47px;
 } 
 
-.adress a:hover {
+.write-to-us:hover {
 	background-color: var(--red-dark);
 }	
 
-.adress a:focus {
+.write-to-us:focus {
 	background-color: var(--red-extra-dark);
 	color: rgba(255, 255, 255, 0.3);
 	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
@@ -656,7 +660,7 @@ input[type="radio"].visually-hidden {
   	padding: 0;
   	white-space: nowrap;
   	clip-path: inset(100%);
-  	clip: rect(0 0 0 0);
+  	clip: rect(0, 0, 0, 0);
   	overflow: hidden;
 }
 
