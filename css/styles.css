@@ -1,8 +1,5 @@
 /*---------------GLOBAL---------------*/
 
-/*outline: 5px solid rgba(0, 255, 255, 0.3);
-  	outline-offset: -5px;*/
-
 :root {
 	--white: #FFFFFF;
 	--grey-extra-light: #D7DCDE;
@@ -17,7 +14,12 @@
 	--grey-for-shadow-toggle: #CFCFCF;
 	--grey-for-slider-button: #C1C1C1;
 	--grey-for-sort-arrows: #A6A6A6;
-	
+	--grey-for-focus: rgba(255, 255, 255, 0.3);
+	--grey-for-focus-shadow: rgba(0, 1, 1, 0.1);
+	--grey-for-focus-color: rgba(0, 0, 0, 0.3);
+	--grey-for-shadow-popup: rgba(0, 0, 0, 0.4);
+	--grey-for-catalog-item-hover: rgba(0, 1, 1, 0.25);
+	--grey-for-catalog-img: rgba(0, 0, 0, 0.1);
 
 	--black: #000000;
 	--black-light: #283136;
@@ -64,9 +66,6 @@ h1 {
 	font-weight: 500;
 	font-size: 55px;
 	line-height: 55px;
-}
-figure {
-	margin: 0;
 }
 
 .visually-hidden {
@@ -170,6 +169,7 @@ a.logo:focus {
 }
 
 .slide {
+	margin: 0;
 	display: none;
 	justify-content: space-between;
 }
@@ -218,8 +218,8 @@ a.logo:focus {
 
 .slide-item a:focus {
 	background-color: var(--red-extra-dark);
-	color: rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	color: var(--grey-for-focus);
+	box-shadow: inset 0px 3px 0px var(--grey-for-focus-shadow);
 }
 
 .slide1 {
@@ -324,8 +324,8 @@ a.logo:focus {
 
 .services-website a:focus {
 	background-color: var(--red-extra-dark);
-	color: rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	color: var(--grey-for-focus);
+	box-shadow: inset 0px 3px 0px var(--grey-for-focus-shadow);
 }
 
 .services-apps a {
@@ -338,8 +338,8 @@ a.logo:focus {
 
 .services-apps a:focus {
 	background-color: var(--green-extra-dark);
-	color: rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	color: var(--grey-for-focus);
+	box-shadow: inset 0px 3px 0px var(--grey-for-focus-shadow);
 }
 
 .services-presentation a {
@@ -352,8 +352,8 @@ a.logo:focus {
 
 .services-presentation a:focus {
 	background-color: var(--yellow-extra-dark);
-	color: rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	color: var(--grey-for-focus);
+	box-shadow: inset 0px 3px 0px var(--grey-for-focus-shadow);
 }
 
 .main-article p, .list-jobs {
@@ -518,7 +518,7 @@ p.main-article-header {
 	width: 100%;
 }
 
-.adress {
+.address {
 	box-sizing: border-box;
 	position: absolute;
 	top: 54px;
@@ -530,7 +530,7 @@ p.main-article-header {
 	margin-bottom: 117px;
 }
 
-.adress h2 {
+.address h2 {
 	margin: 0;
 	padding-top: 44px;
 	font-weight: 700;
@@ -540,7 +540,7 @@ p.main-article-header {
 	color: var(--black);
 }
 
-.adress p {
+.address p {
 	margin: 0;
 	padding-top: 22px;
 }
@@ -571,8 +571,8 @@ p.main-article-header {
 
 .write-to-us:focus {
 	background-color: var(--red-extra-dark);
-	color: rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	color: var(--grey-for-focus);
+	box-shadow: inset 0px 3px 0px var(--grey-for-focus-shadow);
 }
 
 .social {
@@ -629,7 +629,7 @@ p.main-article-header {
 
 .social-button a:focus {
 	background-color: var(--red-extra-dark);
-	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	box-shadow: inset 0px 3px 0px var(--grey-for-focus-shadow);
 }
 
 .social-button a:focus .social-svg {
@@ -956,8 +956,8 @@ a.parameters-sort-active {
 
 .button-submit-form:focus {
 	background-color: var(--grey-extra-dark);
-	color: rgba(0, 0, 0, 0.3);
-	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	color: var(--grey-for-focus-color)
+	box-shadow: inset 0px 3px 0px var(--grey-for-focus-shadow);
 }
 
 .catalog {
@@ -979,7 +979,7 @@ a.parameters-sort-active {
 
 .catalog-item-img {
 	box-sizing: border-box;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	border: 1px solid var(--grey-for-catalog-img);
 	border-radius: 0 0 5px 5px;
 }
 
@@ -1014,7 +1014,7 @@ a.parameters-sort-active {
 }
 
 .catalog-item:hover {
-box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
+	box-shadow: 0px 6px 15px var(--grey-for-catalog-item-hover);
 }
 
 .catalog-item-caption h3 {
@@ -1039,7 +1039,7 @@ a.caption-header:hover {
 
 a.caption-header:focus {
 	color: var(--black);
-	color: rgba(0, 0, 0, 0.3);
+	color: var(--grey-for-focus-color)
 }
 
 a.buy {
@@ -1062,8 +1062,8 @@ a.buy:hover {
 
 a.buy:focus {
 	background-color: var(--red-extra-dark);
-	color: rgba(255, 255, 255, 0.3); 
-	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	color: var(--grey-for-focus); 
+	box-shadow: inset 0px 3px 0px var(--grey-for-focus-shadow);
 }
 
 .page-button {
@@ -1096,10 +1096,11 @@ a.buy:focus {
 .page-button a:hover {
 	background-color: var(--grey-dark);
 }
+
 .page-button a:focus {
-	color: rgba(0, 0, 0, 0.3);
+	color: var(--grey-for-focus-color)
 	background-color: var(--grey-extra-dark);
-	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	box-shadow: inset 0px 3px 0px var(--grey-for-focus-shadow);
 }
 
 a.page-button-current, a.page-button-current:hover { 
@@ -1111,7 +1112,12 @@ a.page-button-current, a.page-button-current:hover {
 
 /*------------------------------POPUP---------------*/
 
+.popup {
+	display: none;
+}
+
 .popup-feedback {
+	animation: bounce 0.6s;
 	position: fixed;
 	right: 0;
 	left: 0;
@@ -1120,7 +1126,7 @@ a.page-button-current, a.page-button-current:hover {
 	width: 960px;
 	height: 590px;
 	background-color: var(--white);
-	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 20px 40px var(--grey-for-shadow-popup);
 }
 
 .popup-feedback-container {
@@ -1148,6 +1154,7 @@ a.page-button-current, a.page-button-current:hover {
 	border: none;
 	background-color: inherit;
 	opacity: 0.3;
+	cursor: pointer;
 }
 
 .button-close:hover {
@@ -1238,11 +1245,54 @@ a.page-button-current, a.page-button-current:hover {
 .button-submit:focus {
 	border: none;
 	background-color: var(--red-extra-dark);
-	color: rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	color: var(--grey-for-focus);
+	box-shadow: inset 0px 3px 0px var(--grey-for-focus-shadow);
 }
 
-.popup-feedback-hidden {
-	display: none;
+.popup-feedback-active {
+	display: block;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.popup-error {
+	animation: shake 0.6s;
+}
