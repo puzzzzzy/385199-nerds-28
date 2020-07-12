@@ -1,56 +1,71 @@
-var LinkPopup = document.querySelector(".write-to-us");
-var Popup = document.querySelector(".popup");
-var ClosePopup = Popup.querySelector(".button-close");
-var FormPopup = Popup.querySelector(".popup-feedback");
-var NamePopup = Popup.querySelector(".popup-name");
-var EmailPopup = Popup.querySelector(".popup-email");
+var linkPopup = document.querySelector(".write-to-us");
+var popup = document.querySelector(".popup");
+var closePopup = popup.querySelector(".button-close");
+var formPopup = popup.querySelector(".popup-feedback");
+var namePopup = popup.querySelector(".popup-name");
+var emailPopup = popup.querySelector(".popup-email");
+var areaPopup = popup.querySelector(".popup-textarea");
 
 var isStorageSupport = true;
-var storage = "";
+var storageName = "";
+var storageEmail = "";
 
 try {
-  storage = localStorage.getItem("login");
+  storageName = localStorage.getItem("login");
 } catch (err) {
   isStorageSupport = false;
 }
 
-LinkPopup.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  Popup.classList.add ("popup-feedback-active");
+try {
+  storageEmail = localStorage.getItem("email");
+} catch (err) {
+  isStorageSupport = false;
+}
 
- if (storage) {
-    NamePopup.value = storage;
-    EmailPopup.focus();
+
+linkPopup.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.add ("popup-feedback-active");
+
+ if (storageName && storageEmail) {
+    namePopup.value = storageName;
+    emailPopup.value = storageEmail;
+    areaPopup.focus();
   } else {
-  	NamePopup.focus();
+    if (storageName) {
+    namePopup.value = storageName;  
+  	emailPopup.focus();
+  
+}
   }
 });
 
-ClosePopup.addEventListener("click", function (evt) {
+closePopup.addEventListener("click", function (evt) {
   evt.preventDefault();
-  Popup.classList.remove("popup-feedback-active");
-  Popup.classList.remove("popup-error");
+  popup.classList.remove("popup-feedback-active");
+  popup.classList.remove("popup-error");
 });
 
-FormPopup.addEventListener("submit", function (evt) {
-  if (!NamePopup.value || !EmailPopup.value) {
+formPopup.addEventListener("submit", function (evt) {
+  if (!namePopup.value || !emailPopup.value || !areaPopup.value) {
     evt.preventDefault();
-    Popup.classList.add("popup-error");
+    popup.classList.add("popup-error");
 
   } else {
   	if (isStorageSupport) {
-    localStorage.setItem("login", NamePopup.value);
-	}
-  }
+    localStorage.setItem("login", namePopup.value);
+    localStorage.setItem("email", emailPopup.value);
+    }
+	 }
 });
 
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (Popup.classList.contains("popup-feedback-active")) {
+    if (popup.classList.contains("popup-feedback-active")) {
       evt.preventDefault();
-      Popup.classList.remove("popup-feedback-active");
-      Popup.classList.add("popup-error");
+      popup.classList.remove("popup-feedback-active");
+      popup.classList.add("popup-error");
     }
   }
 });

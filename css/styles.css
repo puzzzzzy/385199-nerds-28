@@ -514,8 +514,10 @@ p.main-article-header {
 .map {
 	position: relative;
 }
-.map-img {
+
+.iframe {
 	width: 100%;
+	height: 416px;
 }
 
 .address {
@@ -1122,7 +1124,8 @@ a.page-button-current, a.page-button-current:hover {
 	right: 0;
 	left: 0;
 	margin: auto;
-	bottom: 180px;
+	top: 50%;
+	transform: translateY(-50%);
 	width: 960px;
 	height: 590px;
 	background-color: var(--white);
